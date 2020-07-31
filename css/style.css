@@ -102,6 +102,7 @@ body {
     box-sizing: border-box;
     box-shadow: 0px 4px 0px #B68500;
     border-radius: 5px 5px 10px 10px;
+    cursor: pointer;
 }
 
 .hero-avatar {
@@ -119,6 +120,7 @@ body {
 
 .features {
     background-color: #000000;
+    overflow: hidden;
 }
 
 .features-block {
@@ -250,6 +252,7 @@ body {
 
 .contacts-text {
     flex-basis: 50%;
+    overflow: hidden;
 }
 
 .form-title {
@@ -274,7 +277,8 @@ body {
     border-radius: 5px;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     padding: 18px 20px;
     padding-left: 50px;
@@ -284,6 +288,11 @@ input {
     box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25);
     border: none;
     border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
 }
 
 .input-name {
@@ -298,6 +307,13 @@ input {
     background-image: url('../img/phone-icon.svg');
     background-repeat: no-repeat;
     background-position: center left 20px;
+}
+
+.input-comment {
+    margin-bottom: 26px;
+    background-image: url('../img/comment.svg');
+    background-repeat: no-repeat;
+    background-position: top 25px left 20px;
 }
 
 .form-button {
@@ -375,6 +391,11 @@ input {
 
 .preloader_disabled {
     opacity: 0;
+}
+
+.invalid {
+    margin-bottom: 26px;
+    color: #000000;
 }
 
 /* responsive */

@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', ()=> {
 
   const preloader = document.querySelector('.preloader');
+  // const buttonToTop = document.querySelector('.contacts-policy');
+
+  
 
   setTimeout(() => {
     
@@ -12,7 +15,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         duration: 1500
       });
     }, 1000);
-  }, 2000);
+  }, 4000);
   
 
 
@@ -23,10 +26,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 var mySwiper = new Swiper('.swiper-container', {
   loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
-  },
+  // autoplay: {
+    // delay: 5000,
+    // disableOnInteraction: true,
+  // },
   pagination: {
     el: '.projects-pagination',
     bulletClass: 'projects-bullet',
@@ -34,6 +37,45 @@ var mySwiper = new Swiper('.swiper-container', {
     clickable: true
   },
 });
+
+
+// jQuery
+
+ // smooth scroll script
+ //to top
+  $('.contacts-policy').on('click', event => {
+    event.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
+  //to bottom
+  $('.hero-button').on('click', event => {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("footer").offset().top
+  }, 200);
+  });
+
+  // init phome mask from maskedinput library
+  $(".input-phone").mask("+9 (9999) 999-99-99");
+  
+  // form validation
+  $(".contacts-form").validate({
+    errorClass: "invalid", // rename error-class  
+    errorElement: 'div',   // change error tag 
+    rules: {
+      username: {
+        required: true,
+        rangelength: [2, 15]
+      }
+    },
+    messages: {
+      username: {
+        required: "Пожалуйста введите своё имя",
+        rangelength: "Ваше имя должно быть больше одного символа и меньше 15"
+      }
+    }
+  });
 
 // $('.owl-carousel').owlCarousel({
   // loop:true,

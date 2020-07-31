@@ -10,12 +10,16 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
   <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="css/style.css"
-    
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" defer></script>
+	<script src="js/swiper.min.js" defer></script>
+	<script src="js/jquery.validate.min.js" defer></script>
+  <script src="js/jquery.maskedinput.min.js" defer></script>
+	<script src="js/main.js" defer></script>  
 </head>
 <body>
-	<!-- <script src="js/wow.min.js"></script> -->
 	<header class="hero">
 		<div class="container">
 			<div class="hero-header">
@@ -23,7 +27,7 @@
 				<div class="social-links"  data-aos="fade-left">
 					<a href="https://github.com/YanOrlovShatskykh" target="_blank"  class="social-link"><img src="img/social-links/github.svg" alt="github"></a>
 					<a href="https://twitter.com/YanOShatskykh" target="_blank"  class="social-link"><img src="img/social-links/twitter.svg" alt="twitter"></a>
-					<a href="tg://resolve?domain=nestoinameste27" target="_blank" class="social-link"><img src="img/social-links/telegram.svg" alt="telegram"></a>
+					<a href="tg://resolve?domain=Yan_OrlovShatskykh" target="_blank" class="social-link"><img src="img/social-links/telegram.svg" alt="telegram"></a>
 					<a href="https://facebook.com/OrlovShatskykh" target="_blank" class="social-link"><img src="img/social-links/facebook.svg" alt="facebook"></a>
 				</div>
 			</div>
@@ -32,7 +36,7 @@
 					<span class="hero-subtitle" data-aos="fade-left" data-aos-delay="200">Фрилансер</span>
 					<h1 class="hero-title" data-aos="fade-left" data-aos-delay="400">Ян Орлов-Шацких</h1>
 					<p class="hero-description" data-aos="fade-left" data-aos-delay="600">
-						Разрабатываю сайты для малого и среднего бизнеса. У меня можно заказать дизайн и верстку сайта или интернет-магазина
+						Разрабатываю сайты для малого и среднего бизнеса.<br> У меня можно заказать дизайн и верстку сайта или интернет-магазина
 					</p>
 					<button class="button hero-button" data-aos="fade-left" data-aos-delay="800">Бесплатная консультация</button>
 				</div>
@@ -43,7 +47,7 @@
 	<main>
 		<section class="features section">
 			<div class="container">
-				<h2 class="section-title" data-aos="fade-down">Со мной удобно работать</h2>
+				<h2 class="section-title" data-aos="zoom-in">Со мной удобно работать</h2>
 				<div class="features-block">
 					<div class="features-item" data-aos="fade-down-right" data-aos-delay="400">
 						<img src="img/features/offer-img.svg" alt="По договору" class="features-image">
@@ -81,7 +85,7 @@
 
 
 		<section class="section projects">
-			<div class="container">
+			<div class="container" data-aos="fade-out" data-aos-delay="300">
 				
 				<h2 class="section-title">Последние проекты</h2>
 
@@ -102,10 +106,10 @@
 										</div>
 									</div>
 									<div class="project-cost">
-										<img src="img/www.svg" alt="цена" class="project-icon">
+										<img src="img/www.svg" alt="сайт" class="project-icon">
 										<div class="project-description">
 											<h4 class="project-subtitle">Ссылка на сайт</h4>
-											<p class="project-paragraph"><a href="http://bumperball.com.ua/" target="_blank" class="project-paragraph__href">http://bumperball.com.ua/</a></p>
+											<p class="project-paragraph"><a href="http://bumperball.com.ua/" target="_blank" class="project-paragraph__href">bumperball.com.ua</a></p>
 										</div>
 									</div>
 									<div class="project-feedback">
@@ -121,56 +125,22 @@
 							</div>
 							
 							<div class="swiper-slide project-slide">
-								<img src="img/project-img-3.jpg" alt="Сайт компании по производству и доставке морепродуктов “FishGood”" class="project-image">
+								<img src="img/project-img-3.jpg" alt="Сайт компании по внутренней отделке помещений “под ключ” “Ремонт квартир”" class="project-image">
 								<div class="project-text">
 	
-									<h3 class="project-title">Сайт компании по производству и доставке морепродуктов “FishGood”</h3>
+									<h3 class="project-title">Сайт компании по внутренней отделке помещений “под ключ” “Новый проект”</h3>
 									<div class="project-time">
 										<img src="img/time-icon.svg" alt="срок" class="project-icon">
 										<div class="project-description">
 											<h4 class="project-subtitle">Срок</h4>
-											<p class="project-paragraph">4 рабочих дня</p>
+											<p class="project-paragraph">5 рабочих дней</p>
 										</div>
 									</div>
 									<div class="project-cost">
-										<img src="img/cost-icon.svg" alt="цена" class="project-icon">
+										<img src="img/www.svg" alt="сайт" class="project-icon">
 										<div class="project-description">
-											<h4 class="project-subtitle">Стоимость</h4>
-											<p class="project-paragraph">11 000 рублей</p>
-										</div>
-									</div>
-									<div class="project-feedback">
-										<img src="img/feedback-icon.svg" alt="отзыв" class="project-icon">
-										<div class="project-description">
-											<h4 class="project-subtitle">Отзыв клиента</h4>
-											<p class="project-paragraph">
-												Было приятно работать, компания строго соблюдает все сроки, работа очень отлажена.
-Рекомендую.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-
-
-
-							<div class="swiper-slide project-slide">
-								<img src="img/project-img-4.png" alt="Сайт интернет-магазина красоты “Buy Beauty”" class="project-image">
-								<div class="project-text">
-	
-									<h3 class="project-title">Сайт интернет-магазина красоты “Buy Beauty”</h3>
-									<div class="project-time">
-										<img src="img/time-icon.svg" alt="срок" class="project-icon">
-										<div class="project-description">
-											<h4 class="project-subtitle">Срок</h4>
-											<p class="project-paragraph">9 рабочих дней</p>
-										</div>
-									</div>
-									<div class="project-cost">
-										<img src="img/cost-icon.svg" alt="цена" class="project-icon">
-										<div class="project-description">
-											<h4 class="project-subtitle">Стоимость</h4>
-											<p class="project-paragraph">22 000 рублей</p>
+											<h4 class="project-subtitle">Ссылка на сайт</h4>
+											<p class="project-paragraph"><a href="http://new-project.zzz.com.ua/" target="_blank" class="project-paragraph__href">new-project.com</a></p>
 										</div>
 									</div>
 									<div class="project-feedback">
@@ -188,10 +158,43 @@
 
 
 							<div class="swiper-slide project-slide">
-								<img src="img/project-img-2.jpg" alt="Сайт строительной фирмы “Велстрой”" class="project-image">
+								<img src="img/project-img-4.png" alt="Сайт барбершопа и интернет-магазина “Borodinski”" class="project-image">
 								<div class="project-text">
 	
-									<h3 class="project-title">Сайт студии веб-дизайна “BigDrop”</h3>
+									<h3 class="project-title">Сайт барбершопа и интернет-магазина “Borodinski”</h3>
+									<div class="project-time">
+										<img src="img/time-icon.svg" alt="срок" class="project-icon">
+										<div class="project-description">
+											<h4 class="project-subtitle">Срок</h4>
+											<p class="project-paragraph">10 рабочих дней</p>
+										</div>
+									</div>
+									<div class="project-cost">
+										<img src="img/www.svg" alt="сайт" class="project-icon">
+										<div class="project-description">
+											<h4 class="project-subtitle">Ссылка на сайт</h4>
+											<p class="project-paragraph"><a href="http://borodinski.zzz.com.ua/" target="_blank" class="project-paragraph__href">borodinski.com</a></p>
+										</div>
+									</div>
+									<!-- <div class="project-feedback">
+										<img src="img/feedback-icon.svg" alt="отзыв" class="project-icon">
+										<div class="project-description">
+											<h4 class="project-subtitle">Отзыв клиента</h4>
+											<p class="project-paragraph">
+												Все сделано на высочайшем уровне и строго в срок. Самая первая версия не содержала ни одной ошибки, только мелкие замечания. Это действительно круто! Код написан профессионально, не паутина.
+											</p>
+										</div>
+									</div> -->
+								</div>
+							</div>
+
+
+
+							<div class="swiper-slide project-slide">
+								<img src="img/project-img-2.jpg" alt="Сайт поиска отелей в Седоне" class="project-image">
+								<div class="project-text">
+	
+									<h3 class="project-title">Сайт поиска отелей в Седоне</h3>
 									<div class="project-time">
 										<img src="img/time-icon.svg" alt="срок" class="project-icon">
 										<div class="project-description">
@@ -200,13 +203,13 @@
 										</div>
 									</div>
 									<div class="project-cost">
-										<img src="img/cost-icon.svg" alt="цена" class="project-icon">
+										<img src="img/www.svg" alt="сайт" class="project-icon">
 										<div class="project-description">
-											<h4 class="project-subtitle">Стоимость</h4>
-											<p class="project-paragraph">17 000 рублей</p>
+											<h4 class="project-subtitle">Ссылка на сайт</h4>
+											<p class="project-paragraph"><a href="https://yanorlovshatskykh.github.io/sedonna/" target="_blank" class="project-paragraph__href">sedona.com</a></p>
 										</div>
 									</div>
-									<div class="project-feedback">
+									<!-- <div class="project-feedback">
 										<img src="img/feedback-icon.svg" alt="отзыв" class="project-icon">
 										<div class="project-description">
 											<h4 class="project-subtitle">Отзыв клиента</h4>
@@ -215,7 +218,7 @@
 Очень доволен сотрудничеством, теперь знаю где верстать)
 											</p>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
@@ -236,40 +239,41 @@
 	</main>
 	<footer class="section">
 		<div class="container">
-			<h2 class="section-title wow wobble" data-wow-delay="0.2s">
+			<h2 class="section-title" data-aos="flip-left">
 				Свяжитесь со мной
 			</h2>
-			<div class="contacts-block wow flash" data-wow-delay="0.2s">
-				<form action="#" class="contacts-form">
-					<h2 class="form-title">Можете просто оставить заявку, я позвоню вам сегодня</h2>
-					<input type="text" class="input-name" placeholder="Ваше имя">
-					<input type="text" class="input-phone" placeholder="Ваш телефон">
+			<div class="contacts-block">
+				<form action="#" class="contacts-form" data-aos="flip-up">
+					<h2 class="form-title">Оставьте номер телефона или контакт в любом мессенджере и я свяжусь с Вами сегодня</h2>
+					<input type="text" class="input-name" name="username" placeholder="Ваше имя">
+					<input type="text" class="input-phone" name="phone" placeholder="Ваш телефон">
+					<textarea rows="3" class="input-comment" placeholder="Ваш комментарий"></textarea>
 					<button class="button form-button">Бесплатная консультация</button>
 				</form>
 				<div class="contacts-text">
 					<div class="contacts-data">
-						<div class="contacts-phone">
+						<div class="contacts-phone" data-aos="fade-down" data-aos-delay="200">
 							<h4 class="contacts-title">Телефон</h4>
-							<a class="contacts-links" href="tel:111">+7 999 123-45-67</a>
+							<a class="contacts-links" href="tel:+380663523980">+38 066 352-39-80</a>
 						</div>
-						<div class="contacts-mail">
+						<div class="contacts-mail" data-aos="fade-left" data-aos-delay="400">
 							<h4 class="contacts-title">Почта</h4>
-							<a class="contacts-links" href="mailto:google@gmail.com">google@gmail.com</a>
+							<a class="contacts-links" href="mailto:yan.orlov.shatskykh@gmail.com">yan.orlov.shatskykh@gmail.com</a>
 						</div>
-						<div class="contacts-social">
+						<div class="contacts-social" data-aos="fade-up" data-aos-delay="600">
 							<h4 class="contacts-title">Соцсети</h4>
-							<a href="#" class="contacts-links">yan</a>
-							<a href="#" class="contacts-links">yan</a>
-							<a href="#" class="contacts-links">yan</a>
+							<a href="https://twitter.com/YanOShatskykh" target="_blank"  class="contacts-links">My Twitter</a>
+							<a href="tg://resolve?domain=Yan_OrlovShatskykh" target="_blank" class="contacts-links">My Telegram</a>
+							<a href="https://facebook.com/OrlovShatskykh" target="_blank" class="contacts-links">My Facebook</a>
 						</div>
 					</div>
-					<div class="social-links">
-						<a href="https://github.com/YanOrlovShatskykh" target="blanc"  class="social-link"><img src="img/social-links/github.svg" alt="github"></a>
-						<a href="https://github.com/YanOrlovShatskykh" target="blank"  class="social-link"><img src="img/social-links/twitter.svg" alt="twitter"></a>
-						<a href="https://github.com/YanOrlovShatskykh"  target="blank" class="social-link"><img src="img/social-links/instagram.svg" alt="instagram"></a>
-						<a href="https://github.com/YanOrlovShatskykh"  target="blank" class="social-link"><img src="img/social-links/facebook.svg" alt="facebook"></a>
-					</div>
-					<a href="#" class="contacts-policy">Политика конфиденциальности</a>
+					<!-- <div class="social-links">
+						<a href="https://github.com/YanOrlovShatskykh" target="_blank"  class="social-link"><img src="img/social-links/github.svg" alt="github"></a>
+						<a href="https://twitter.com/YanOShatskykh" target="_blank"  class="social-link"><img src="img/social-links/twitter.svg" alt="twitter"></a>
+						<a href="tg://resolve?domain=nestoinameste27" target="_blank" class="social-link"><img src="img/social-links/telegram.svg" alt="telegram"></a>
+						<a href="https://facebook.com/OrlovShatskykh" target="_blank" class="social-link"><img src="img/social-links/facebook.svg" alt="facebook"></a>
+					</div> -->
+					<a href="#" class="contacts-policy">Created by Me)</a>
 				</div>
 			</div>
 		</div>
@@ -279,15 +283,13 @@
 		<img class="preloader__image" src="img/logo-big.svg" alt="">
 	</div>
 
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	><script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	
 	<!-- <script src="js/owl.carousel.min.js"></script> -->
 	
   <!-- <script> -->
     
   <!-- </script> -->
 	
-	<script src="js/swiper.min.js"></script>
-	<script src="js/main.js"></script>
+
 </body>
 </html>
