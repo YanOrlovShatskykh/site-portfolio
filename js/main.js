@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', ()=> {
 
   const preloader = document.querySelector('.preloader');
-  // const buttonToTop = document.querySelector('.contacts-policy');
-
+  const form = document.querySelector('.contacts-form');
+  const popup = document.querySelector('.popup');
+  const popupDialog = document.querySelector('.popup-dialog');
+  const popupClose = document.querySelector('.popup-dialog__close');
+  const formData = new FormData();
   
-
-  setTimeout(() => {
-    
+  setTimeout(() => { 
     preloader.classList.add('preloader_disabled');
     setTimeout(() => {
-      
       preloader.style.display = 'none';
       AOS.init({
         duration: 1500
@@ -17,32 +17,87 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }, 1000);
   }, 4000);
   
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.projects-pagination',
+      bulletClass: 'projects-bullet',
+      bulletActiveClass: 'projects-bullet-active',
+      clickable: true
+    },
+  });
 
+  const closeP = ()=> {
+    popup.classList.remove('popup_active');
+    document.querySelector('.popup-dialog__text').remove();
+  };
 
+  const closePopup = event => {
+    event.preventDefault();
+    let target = event.target;
+    
+    if(event.keyCode === 27) {
+      event.preventDefault();
+      closeP();
+    }
 
+    if(target.classList.contains('popup-dialog__close')) {
+      closeP();
+    }
 
+    if(!target.closest('.popup-dialog')) {
+      closeP();
+    }
 
-// new WOW().init();
+    popupClose.removeEventListener('click', closePopup);
+  };
 
-var mySwiper = new Swiper('.swiper-container', {
-  loop: true,
-  // autoplay: {
-    // delay: 5000,
-    // disableOnInteraction: true,
-  // },
-  pagination: {
-    el: '.projects-pagination',
-    bulletClass: 'projects-bullet',
-    bulletActiveClass: 'projects-bullet-active',
-    clickable: true
-  },
-});
+  const sendMail = event => {
+    if(!document.querySelector('.input-name').classList.contains('invalid')) {
+      event.preventDefault();
+      let username = form[0].value;
+      let phone = form[1].value;
+      let comment = form[2].value;
+      formData.append('username', username);
+      formData.append('phone', phone);
+      formData.append('comment', comment);
 
+      fetch("php/mail.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(response => {        
+        const popupText = document.createElement('h3');
+        popupText.classList.add('popup-dialog__text');
 
-// jQuery
+        if(response == 'true') {
+          popupText.innerText = `${username}, спасибо за заявку! Я вскоре с Вами свяжусь))`;
+          popupDialog.insertAdjacentElement('beforeend', popupText);
+        } else {
+          popupText.innerText = `${username}, что-то пошло не так( Попробуйте отправить заявку ещё разок или свяжитесь со мной через контакты, указанные на сайте.`;
+          popupDialog.insertAdjacentElement('beforeend', popupText);
+        }
+        popup.classList.add('popup_active');
+      });
 
- // smooth scroll script
- //to top
+      popup.addEventListener('click', closePopup);
+      document.addEventListener('keydown', event => {
+        if(event.keyCode === 27 && popup.classList.contains('popup_active')) {
+          closeP();
+        }
+      });
+    }
+  };
+
+  form.addEventListener('submit', sendMail);
+  
+  ////////////////////////////////
+  // jQuery
+  ///////////////////////////////
+
+  // smooth scroll script
+  //to top
   $('.contacts-policy').on('click', event => {
     event.preventDefault();
     $('html, body').animate({scrollTop:0}, '300');
@@ -76,34 +131,4 @@ var mySwiper = new Swiper('.swiper-container', {
       }
     }
   });
-
-// $('.owl-carousel').owlCarousel({
-  // loop:true,
-  // margin:30,
-  // nav:true,
-  // navContainerClass:'arrows',
-  // navClass:['arrows__left', 'arrows__right'],
-  // autoplay:true,
-  // autoplayTimeout:2000,
-  // autoplayHoverPause:true,
-  // autoWidth:true,
-  // items: 2
-  // responsive:{
-  //     0:{
-  //         items:1
-  //     },
-  //     700:{
-  //         items:1
-  //     },
-  //     900:{
-  //         items:1
-  //     },
-  //     1200:{
-  //         items:1
-  //     }
-  // }
-// });
-
-}); 
-
-
+});
